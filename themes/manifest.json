@@ -1,9 +1,11 @@
 {
   "publication": {
+    "publisherId": "ballombert",
     "publisher": "ballombert",
     "name": "beadark",
     "displayName": "BeaDark",
     "description": "Calm ADHD-friendly VS Code theme",
+    "icon": "assets/beadark-icon.png",
     "version": "0.0.1",
     "license": "MIT",
     "repository": {
