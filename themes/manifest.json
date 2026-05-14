@@ -1,4 +1,30 @@
 {
+  "publication": {
+    "publisher": "ballombert",
+    "name": "beadark",
+    "displayName": "BeaDark",
+    "description": "Calm ADHD-friendly VS Code theme",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ballombert/viscode-tdah-theme.git"
+    },
+    "engines": {
+      "vscode": "^1.118.0"
+    },
+    "categories": [
+      "Themes"
+    ],
+    "keywords": [
+      "theme",
+      "dark theme",
+      "light theme",
+      "adhd",
+      "accessibility"
+    ],
+    "pricing": "free"
+  },
   "template": "themes/templates/bea-v2.1.template.jsonc",
   "variants": [
     {
