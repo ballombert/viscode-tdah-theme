@@ -1,0 +1,54 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Theme: Clean VSIX",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "clean:vsix"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Theme: Build VSIX",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "build:vsix"],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Theme: Rebuild VSIX",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "rebuild:vsix"],
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "Theme: Install Latest VSIX",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "install:vsix"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Theme: Build + Install",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Theme: Rebuild VSIX",
+        "Theme: Install Latest VSIX"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Theme: Test (Extension Host)",
+      "type": "shell",
+      "command": "echo",
+      "args": [
+        "Press F5 or run Launch: Theme Test (Extension Host)."
+      ],
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}
