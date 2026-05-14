@@ -1,0 +1,68 @@
+{
+  "template": "themes/templates/bea-v2.1.template.jsonc",
+  "variants": [
+    {
+      "id": "bea-v2-onyx",
+      "label": "Bea Theme Onyx",
+      "themeName": "Bea Theme Onyx",
+      "uiTheme": "vs-dark",
+      "themeType": "dark",
+      "palette": "themes/palettes/bea-v2-onyx.palette.json",
+      "out": "themes/generated/bea-v2-onyx-color-theme.json"
+    },
+    {
+      "id": "bea-v2-deepsea",
+      "label": "Bea Theme Deep Sea",
+      "themeName": "Bea Theme Deep Sea",
+      "uiTheme": "vs-dark",
+      "themeType": "dark",
+      "palette": "themes/palettes/bea-v2-deepsea.palette.json",
+      "out": "themes/generated/bea-v2-deepsea-color-theme.json"
+    },
+    {
+      "id": "bea-v2-forest-night",
+      "label": "Bea Theme Forest Night",
+      "themeName": "Bea Theme Forest Night",
+      "uiTheme": "vs-dark",
+      "themeType": "dark",
+      "palette": "themes/palettes/bea-v2-forest-night.palette.json",
+      "out": "themes/generated/bea-v2-forest-night-color-theme.json"
+    },
+    {
+      "id": "bea-v2-slate-focus",
+      "label": "Bea Theme Slate Focus",
+      "themeName": "Bea Theme Slate Focus",
+      "uiTheme": "vs-dark",
+      "themeType": "dark",
+      "palette": "themes/palettes/bea-v2-slate-focus.palette.json",
+      "out": "themes/generated/bea-v2-slate-focus-color-theme.json"
+    },
+    {
+      "id": "bea-v2-dracula",
+      "label": "Bea Theme Dracula (Cool)",
+      "themeName": "Bea Theme Dracula (Cool)",
+      "uiTheme": "vs-dark",
+      "themeType": "dark",
+      "palette": "themes/palettes/bea-v2-dracula.palette.json",
+      "out": "themes/generated/bea-v2-dracula-color-theme.json"
+    },
+    {
+      "id": "bea-v2-polar",
+      "label": "Bea Theme Polar",
+      "themeName": "Bea Theme Polar",
+      "uiTheme": "vs",
+      "themeType": "light",
+      "palette": "themes/palettes/bea-v2-polar.palette.json",
+      "out": "themes/generated/bea-v2-polar-color-theme.json"
+    },
+    {
+      "id": "bea-v2-paper-mint",
+      "label": "Bea Theme Paper Mint",
+      "themeName": "Bea Theme Paper Mint",
+      "uiTheme": "vs",
+      "themeType": "light",
+      "palette": "themes/palettes/bea-v2-paper-mint.palette.json",
+      "out": "themes/generated/bea-v2-paper-mint-color-theme.json"
+    }
+  ]
+}

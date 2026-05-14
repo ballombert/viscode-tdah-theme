@@ -5,6 +5,26 @@
 Palette de code calme et lisible pour reduire la charge attentionnelle (TDAH).  
 Fond fixe `#191919`, contraste selectif, hierarchie de couleur par sens et non par bruit.
 
+## Variantes officielles (VSIX unique)
+
+Toutes les variantes ci-dessous sont publiees dans un seul package VSIX:
+
+| ID | Label VS Code | Mode |
+|---|---|---|
+| `bea-v2-onyx` | Bea Theme Onyx | dark |
+| `bea-v2-deepsea` | Bea Theme Deep Sea | dark |
+| `bea-v2-forest-night` | Bea Theme Forest Night | dark |
+| `bea-v2-slate-focus` | Bea Theme Slate Focus | dark |
+| `bea-v2-dracula` | Bea Theme Dracula (Cool) | dark |
+| `bea-v2-polar` | Bea Theme Polar | light |
+| `bea-v2-paper-mint` | Bea Theme Paper Mint | light |
+
+### Regle complementaire de palette
+
+- Les roles texte non-erreur (`fg.*`, `accent.keyword`, `accent.function`, `accent.type`, `accent.string`, `accent.number`) n'utilisent pas de tons jaune/orange/rouge/rose.
+- `accent.error` reste reserve aux erreurs et invalides.
+- Les checks automatiques de policy palette sont executables via `npm run theme:check-palettes`.
+
 ---
 
 ## Tableau 1 - Palette nominative
@@ -22,13 +42,13 @@ Fond fixe `#191919`, contraste selectif, hierarchie de couleur par sens et non p
 | fg.comment | `#6F7A89` | Commentaires |
 | accent.keyword | `#7AA2F7` | Keywords, control flow, tags, imports |
 | accent.function | `#7CD4B8` | Fonctions, methodes, events, macros |
-| accent.type | `#E6C07B` | Types, classes, interfaces, namespaces |
+| accent.type | `teal froid (variant)` | Types, classes, interfaces, namespaces |
 | accent.string | `#98C379` | Chaines de caracteres |
 | accent.number | `#C792EA` | Nombres, constantes, regexp, decorateurs |
 | accent.error | `#E06C75` | Erreurs, invalid, unsafe |
 | state.info | `#7AA2F7` | Information UI (= accent.keyword) |
 | state.success | `#7CD4B8` | Success UI (= accent.function) |
-| state.warning | `#E6C07B` | Warning UI (= accent.type) |
+| state.warning | `warning UI (variant)` | Warning UI uniquement (non utilise pour le texte) |
 | state.error | `#E06C75` | Error UI (= accent.error) |
 
 ---

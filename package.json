@@ -17,17 +17,52 @@
   "contributes": {
     "themes": [
       {
-        "label": "Bea's Theme v2.1",
+        "label": "Bea Theme Onyx",
         "uiTheme": "vs-dark",
-        "path": "./themes/Bea's Theme v2.1-color-theme.json"
+        "path": "./themes/generated/bea-v2-onyx-color-theme.json"
+      },
+      {
+        "label": "Bea Theme Deep Sea",
+        "uiTheme": "vs-dark",
+        "path": "./themes/generated/bea-v2-deepsea-color-theme.json"
+      },
+      {
+        "label": "Bea Theme Forest Night",
+        "uiTheme": "vs-dark",
+        "path": "./themes/generated/bea-v2-forest-night-color-theme.json"
+      },
+      {
+        "label": "Bea Theme Slate Focus",
+        "uiTheme": "vs-dark",
+        "path": "./themes/generated/bea-v2-slate-focus-color-theme.json"
+      },
+      {
+        "label": "Bea Theme Dracula (Cool)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/generated/bea-v2-dracula-color-theme.json"
+      },
+      {
+        "label": "Bea Theme Polar",
+        "uiTheme": "vs",
+        "path": "./themes/generated/bea-v2-polar-color-theme.json"
+      },
+      {
+        "label": "Bea Theme Paper Mint",
+        "uiTheme": "vs",
+        "path": "./themes/generated/bea-v2-paper-mint-color-theme.json"
       }
     ]
   },
   "scripts": {
     "clean:vsix": "rm -f ./*.vsix",
-    "build:vsix": "npx --yes @vscode/vsce package --no-dependencies",
+    "build:vsix": "npm run theme:build-all && npx --yes @vscode/vsce package --no-dependencies",
     "rebuild:vsix": "npm run clean:vsix && npm run build:vsix",
     "install:vsix": "bash -lc 'VSIX=$(ls -t ./*.vsix 2>/dev/null | head -n1); if [[ -z \"$VSIX\" ]]; then echo \"No .vsix file found. Run npm run build:vsix first.\"; exit 1; fi; code --install-extension \"$VSIX\" --force'",
-    "test:theme": "echo 'Run the launch configuration: Theme Test (Extension Host)'"
+    "test:theme": "echo 'Run the launch configuration: Theme Test (Extension Host)'",
+    "theme:extract-palette": "node scripts/extract-theme-palette.js",
+    "theme:apply-palette": "node scripts/apply-theme-palette.js",
+    "theme:extract-and-apply": "npm run theme:extract-palette && npm run theme:apply-palette",
+    "theme:check-palettes": "node scripts/check-palette-policy.js --manifest themes/manifest.json",
+    "theme:build-all": "node scripts/build-all-themes.js --manifest themes/manifest.json"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "name": "Bea v2.1 extracted palette",
+  "source": "themes/Bea's Theme v2.1-color-theme.json",
+  "naming": "semantic",
+  "generatedAt": "2026-05-14T13:55:08.771Z",
+  "colors": {
+    "COLOR_BORDER_FOCUS": "#3A4250",
+    "COLOR_TEXT_PRIMARY": "#E6EAF0",
+    "COLOR_TEXT_SECONDARY": "#B5BDC9",
+    "COLOR_ACCENT_RED": "#E06C75",
+    "COLOR_BG_EDITOR": "#191919",
+    "COLOR_TEXT_MUTED": "#6F7A89",
+    "COLOR_ACCENT_BLUE": "#7AA2F7",
+    "COLOR_BG_SELECTION": "#2B313A",
+    "COLOR_BG_SELECTION_STRONG": "#2B313A99",
+    "COLOR_BG_SELECTION_SOFT": "#2B313A66",
+    "COLOR_BG_HOVER": "#24272E",
+    "COLOR_BG_WORD_HIGHLIGHT": "#2B313A88",
+    "COLOR_BG_WORD_HIGHLIGHT_STRONG": "#3A425088",
+    "COLOR_BORDER": "#30353D",
+    "COLOR_ACCENT_MINT": "#7CD4B8",
+    "COLOR_ACCENT_AMBER": "#E6C07B",
+    "COLOR_BG_SURFACE": "#202020",
+    "COLOR_TEXT_SUBTLE": "#8C95A3",
+    "COLOR_ACCENT_GREEN": "#98C379",
+    "COLOR_ACCENT_PURPLE": "#C792EA",
+    "COLOR_ACCENT_BLUE_HOVER": "#8AAFF8"
+  }
+}

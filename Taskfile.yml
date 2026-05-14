@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+
+version: '3'
+
+tasks:
+  default:
+    desc: List available tasks
+    cmds:
+      - task --list
+    silent: true
+
+  theme:check:
+    desc: Validate palette policy for all variants
+    cmds:
+      - npm run theme:check-palettes
+
+  theme:build:
+    desc: Generate all theme variants from manifest
+    cmds:
+      - npm run theme:build-all
+
+  vsix:build:
+    desc: Build VSIX (includes theme generation)
+    cmds:
+      - npm run build:vsix
+
+  vsix:rebuild:
+    desc: Clean and rebuild VSIX
+    cmds:
+      - npm run rebuild:vsix
+
+  vsix:install:
+    desc: Install latest built VSIX in VS Code
+    cmds:
+      - npm run install:vsix
+
+  release:local:
+    desc: Validate palettes, rebuild VSIX, and install locally
+    cmds:
+      - task theme:check
+      - task vsix:rebuild
+      - task vsix:install
+
+  test:host:
+    desc: Reminder for Extension Host manual test
+    cmds:
+      - 'echo "Run launch config: Theme Test (Extension Host)"'
