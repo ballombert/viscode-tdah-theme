@@ -1,0 +1,8 @@
+# Keys, strings, numbers, aliases and comments.
+defaults: &defaults
+  name: "Bea"
+  count: 42
+  enabled: true
+profile:
+  <<: *defaults
+  items: [one, two]

@@ -10,9 +10,9 @@ tasks:
     silent: true
 
   theme:check:
-    desc: Validate palette policy for all variants
+    desc: Build and validate themes, contrast, commands and metadata
     cmds:
-      - npm run theme:check-palettes
+      - npm run check
 
   theme:build:
     desc: Generate all theme variants from manifest

@@ -1,7 +1,16 @@
 .vscode/**
 .vscode-test/**
+.github/**
 .gitignore
 docs/**
+test/**
+scripts/**
+themes/palettes/**
+themes/templates/**
+themes/extracted/**
+themes/manifest.json
+themes/Bea's Theme v2.1-color-theme.json
+Taskfile.yml
 node_modules/**
 package-lock.json
 *.vsix

@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const DEFAULT_SOURCE = "themes/Bea's Theme v2.1-color-theme.json";
-const DEFAULT_PALETTE = 'themes/palettes/bea-v2.1.palette.json';
-const DEFAULT_TEMPLATE = 'themes/templates/bea-v2.1.template.jsonc';
+const DEFAULT_PALETTE = 'themes/extracted/palette.json';
+const DEFAULT_TEMPLATE = 'themes/extracted/template.jsonc';
 const DEFAULT_NAMING = 'semantic';
 const HEX_COLOR_RE = /#[0-9a-fA-F]{3,8}\b/g;
 const SEMANTIC_TOKEN_BY_HEX = {
@@ -68,6 +68,14 @@ function main() {
   const sourcePath = path.resolve(process.cwd(), args.source);
   const palettePath = path.resolve(process.cwd(), args.palette);
   const templatePath = path.resolve(process.cwd(), args.template);
+  const protectedPaths = [
+    'themes/templates/bea-v2.1.template.jsonc',
+    'themes/palettes/bea-v2.1.palette.json',
+    ...JSON.parse(fs.readFileSync('themes/manifest.json', 'utf8')).variants.map((variant) => variant.palette),
+  ].map((file) => path.resolve(file));
+  if ([palettePath, templatePath].some((file) => protectedPaths.includes(file))) {
+    throw new Error('Extraction cannot overwrite maintained palettes or the shared template. Use themes/extracted/.');
+  }
 
   if (!fs.existsSync(sourcePath)) {
     throw new Error(`Source file not found: ${args.source}`);

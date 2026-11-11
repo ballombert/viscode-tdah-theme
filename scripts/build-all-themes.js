@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
+const { readJson, renderTheme } = require('./theme-contract');
 
 const DEFAULT_MANIFEST = 'themes/manifest.json';
 
@@ -72,6 +73,13 @@ function main() {
   }
 
   console.log(`Built ${variants.length} theme variant(s).`);
+  if (args.manifest === DEFAULT_MANIFEST) {
+    const palette = readJson(variants[0].palette);
+    fs.writeFileSync('themes/palettes/bea-v2.1.palette.json',
+      `${JSON.stringify({ ...palette, name: 'Bea v2.1 compatibility palette (Onyx)' }, null, 2)}\n`);
+    const compatibilityTheme = renderTheme(fs.readFileSync(template, 'utf8'), palette.colors, "Bea's Theme v2.1", 'dark');
+    fs.writeFileSync("themes/Bea's Theme v2.1-color-theme.json", `${JSON.stringify(compatibilityTheme, null, 2)}\n`);
+  }
 }
 
 try {

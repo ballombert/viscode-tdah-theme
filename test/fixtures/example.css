@@ -1,0 +1,7 @@
+/* Keep punctuation neutral and strings readable. */
+:root { --spacing: 8px; }
+.primary {
+  display: block;
+  padding: var(--spacing);
+  font-family: "Atkinson Hyperlegible Mono", monospace;
+}

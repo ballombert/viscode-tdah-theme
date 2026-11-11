@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { parseTemplate } = require('./theme-contract');
 
 const DEFAULT_TEMPLATE = 'themes/templates/bea-v2.1.template.jsonc';
 const DEFAULT_PALETTE = 'themes/palettes/bea-v2.1.palette.json';
@@ -99,7 +100,7 @@ function main() {
   const output = applyThemeMetadata(replaced, args.themeName, args.themeType);
 
   ensureDirForFile(outPath);
-  fs.writeFileSync(outPath, output, 'utf8');
+  fs.writeFileSync(outPath, `${JSON.stringify(parseTemplate(output), null, 2)}\n`, 'utf8');
 
   console.log(`Generated theme file: ${path.relative(process.cwd(), outPath)}`);
 }

@@ -1,36 +1,9 @@
 {
-  "publication": {
-    "publisherId": "ballombert",
-    "publisher": "ballombert",
-    "name": "beadark",
-    "displayName": "BeaDark",
-    "description": "Calm ADHD-friendly VS Code theme",
-    "icon": "assets/beadark-icon.png",
-    "version": "0.0.1",
-    "license": "MIT",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/ballombert/viscode-tdah-theme.git"
-    },
-    "engines": {
-      "vscode": "^1.118.0"
-    },
-    "categories": [
-      "Themes"
-    ],
-    "keywords": [
-      "theme",
-      "dark theme",
-      "light theme",
-      "adhd",
-      "accessibility"
-    ],
-    "pricing": "free"
-  },
   "template": "themes/templates/bea-v2.1.template.jsonc",
   "variants": [
     {
       "id": "bea-v2-onyx",
+      "collection": "calm",
       "label": "Bea Theme Onyx",
       "themeName": "Bea Theme Onyx",
       "uiTheme": "vs-dark",
@@ -40,6 +13,7 @@
     },
     {
       "id": "bea-v2-deepsea",
+      "collection": "calm",
       "label": "Bea Theme Deep Sea",
       "themeName": "Bea Theme Deep Sea",
       "uiTheme": "vs-dark",
@@ -49,6 +23,7 @@
     },
     {
       "id": "bea-v2-forest-night",
+      "collection": "calm",
       "label": "Bea Theme Forest Night",
       "themeName": "Bea Theme Forest Night",
       "uiTheme": "vs-dark",
@@ -58,6 +33,7 @@
     },
     {
       "id": "bea-v2-slate-focus",
+      "collection": "calm",
       "label": "Bea Theme Slate Focus",
       "themeName": "Bea Theme Slate Focus",
       "uiTheme": "vs-dark",
@@ -67,6 +43,7 @@
     },
     {
       "id": "bea-v2-dracula",
+      "collection": "calm",
       "label": "Bea Theme Dracula (Cool)",
       "themeName": "Bea Theme Dracula (Cool)",
       "uiTheme": "vs-dark",
@@ -76,6 +53,7 @@
     },
     {
       "id": "bea-v2-polar",
+      "collection": "calm",
       "label": "Bea Theme Polar",
       "themeName": "Bea Theme Polar",
       "uiTheme": "vs",
@@ -85,12 +63,33 @@
     },
     {
       "id": "bea-v2-paper-mint",
+      "collection": "calm",
       "label": "Bea Theme Paper Mint",
       "themeName": "Bea Theme Paper Mint",
       "uiTheme": "vs",
       "themeType": "light",
       "palette": "themes/palettes/bea-v2-paper-mint.palette.json",
       "out": "themes/generated/bea-v2-paper-mint-color-theme.json"
+    },
+    {
+      "id": "bea-neon-night",
+      "collection": "neon",
+      "label": "Bea Theme Neon Night",
+      "themeName": "Bea Theme Neon Night",
+      "uiTheme": "vs-dark",
+      "themeType": "dark",
+      "palette": "themes/palettes/bea-neon-night.palette.json",
+      "out": "themes/generated/bea-neon-night-color-theme.json"
+    },
+    {
+      "id": "bea-neon-day",
+      "collection": "neon",
+      "label": "Bea Theme Neon Day",
+      "themeName": "Bea Theme Neon Day",
+      "uiTheme": "vs",
+      "themeType": "light",
+      "palette": "themes/palettes/bea-neon-day.palette.json",
+      "out": "themes/generated/bea-neon-day-color-theme.json"
     }
   ]
 }
