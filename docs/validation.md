@@ -19,7 +19,7 @@ Inspect the VSIX ZIP: all nine generated themes, the icon, extension entry point
 and reading-settings module must exist; tests, local backups and dependencies
 must not be included. Verify the publisher/name, icon, description, links,
 categories, commands and theme contributions from the packaged manifest.
-
+ 
 Only the nine declared background states are measured, not every possible stack
 of multiple decorations. Scope-contract tests do not tokenize source code.
 Actual TextMate and language-server behavior needs the checks below.
