@@ -23,7 +23,7 @@ categories, commands and theme contributions from the packaged manifest.
 Only the nine declared background states are measured, not every possible stack
 of multiple decorations. Scope-contract tests do not tokenize source code.
 Actual TextMate and language-server behavior needs the checks below.
-
+ 
 ## Extension Host smoke test
 
 With the locally installed VS Code CLI, create a fresh, short, isolated directory
