@@ -5,7 +5,7 @@
   "description": "Nine high-contrast color themes, including Neon, with optional, reversible focus and reading-font commands.",
   "icon": "assets/beadark-icon.png",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/ballombert/viscode-tdah-theme.git"

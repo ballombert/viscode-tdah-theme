@@ -241,6 +241,16 @@ Pushes to `main` run checks and package all nine themes and commands.
 The existing GitHub workflow publishes a GitHub release containing a uniquely
 build-versioned VSIX. Local builds do not publish or install anything.
 
+Marketplace publication is separate: after updating `version` in `package.json`
+and `package-lock.json` to a version not already published, run **Publish to
+Visual Studio Marketplace** manually from the GitHub Actions tab with `main`
+selected. The workflow validates and builds the VSIX before publishing it.
+It uses the `Publish.yml` Marketplace trusted-publishing policy and GitHub
+Actions OIDC (`id-token: write`), without a Marketplace personal access token.
+Runs on other branches or forks do not publish. A published Marketplace version
+cannot be overwritten; increase the version before the next publication.
+The existing GitHub release workflow does not publish to the Marketplace.
+
 ## License and contributions
 
 BeaDark is available under the [MIT License](LICENSE). Contributions, bug reports

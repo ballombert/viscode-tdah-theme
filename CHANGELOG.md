@@ -6,6 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.2.0]
+
 - Rework the seven existing themes with measured code, comment and UI contrast.
 - Add Neon Night and Neon Day with six role-based accents, no glow or animation.
 - Separate type/decorator syntax colors from warning UI and harmonize TextMate

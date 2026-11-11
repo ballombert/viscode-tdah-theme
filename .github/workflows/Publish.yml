@@ -1,0 +1,40 @@
+name: Publish to Visual Studio Marketplace
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: marketplace-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.repository == 'ballombert/viscode-tdah-theme' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate and build VSIX
+        run: npm run build:vsix
+
+      - name: Publish VSIX with trusted publishing
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          npx --no-install vsce publish --oidc --packagePath "./beadark-${VERSION}.vsix"
